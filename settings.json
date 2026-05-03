@@ -1,43 +1,24 @@
 // LANGUAGE FORMATTING PREFERENCES
 
 {
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  // WINDOW APPEARANCE AND BEHAVIOR
-  "apc.electron": {
-    "backgroundColor": "#00000000",
-    "frame": false,
-    "vibrancy": "fullscreen-ui",
-    "visualEffectState": "active",
-    "titleBarStyle": "hidden",
-    "trafficLightPosition": {
-      "x": 15,
-      "y": 14
-    }
-  },
-  // "window.title": "${activeEditorShort}${separator}${rootName}",
-  // "window.title": "VS Code",
-  "window.title": " ",
-  "window.newWindowDimensions": "inherit",
-  "window.zoomLevel": 0.05,
-  "window.autoDetectColorScheme": true,
+  "window.titleBarStyle": "native",
+    "custom-ui-style.electron": {
+        "frame": false,
+        "transparent": true,
+        "opacity": 0.98,
+        "titleBarStyle": "hidden",
+        "titleBarOverlay": {
+            "color": "#00000000",
+            "symbolColor": "#ffffff40",
+            "height": 40
+        }
+    },
+    // "window.title": "${activeEditorShort}${separator}${rootName}",
+    // "window.title": "VS Code",
+    "window.title": " ",
+    "window.newWindowDimensions": "inherit",
+    "window.zoomLevel": 0.05,
+    "window.autoDetectColorScheme": true,
 
   // FILE SETTINGS
   "files.associations": {
@@ -57,13 +38,12 @@
   },
 
   // EDITOR APPEARANCE AND BEHAVIOR
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "editor.fontFamily": "Cascadia Code, Consolas, 'Courier New', monospace",
   "editor.lineHeight": 2,
   "editor.fontLigatures": true,
-  "editor.fontSize": 11.6,
+  "editor.fontSize": 13.5,
   "editor.fontWeight": "580",
-  "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
   "editor.lightbulb.enabled": "off",
   "editor.linkedEditing": true,
@@ -71,7 +51,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.occurrencesHighlight": "off",
   "editor.selectionHighlight": false,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.guides.highlightActiveBracketPair": false,
   "editor.guides.indentation": false,
   "editor.bracketPairColorization.enabled": false,
@@ -96,17 +76,18 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.matchBrackets": "never",
-  "editor.stickyScroll.enabled": false,
-  "editor.stickyScroll.scrollWithEditor": false,
+  "editor.cursorSurroundingLines": 100,
   "editor.smoothScrolling": true,
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyTabStops": true,
+  "editor.stickyScroll.maxLineCount": 3,
   // TERMINAL CONFIGURATION
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "Caskaydia Cove",
   "terminal.integrated.defaultLocation": "view",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontSize": 11.5,
-  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.fontSize": 14.0,
+  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.fontWeight": "380",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.cursorStyle": "block",
@@ -143,8 +124,10 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.graph.minimap.enabled": false,
-  "gitlens.graph.minimap.additionalTypes": ["tags"],
+  "gitlens.graph.minimap.additionalTypes": [
+    "localBranches",
+    "tags"
+  ],
   "gitlens.graph.layout": "editor",
   "gitlens.views.repositories.showIncomingActivity": true,
   "gitlens.views.workspaces.showIncomingActivity": true,
@@ -185,23 +168,17 @@
   "workbench.startupEditor": "none",
   "workbench.layoutControl.type": "both",
   "workbench.editor.enablePreview": true,
-  "workbench.preferredHighContrastLightColorTheme": "Atom One Light",
   "workbench.reduceMotion": "on",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": "symbols",
+  "workbench.iconTheme": "ayu",
   "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
   "workbench.editor.labelFormat": "short",
   "workbench.tips.enabled": false,
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.editor.showTabs": "multiple",
   "workbench.editor.scrollToSwitchTabs": true,
-  "workbench.tree.enableStickyScroll": false,
-
-  // BREADCRUMBS SETTINGS
-  "breadcrumbs.enabled": false,
-  "breadcrumbs.icons": false,
+  // "breadcrumbs.icons": false,
 
   // DIFF AND SCM SETTINGS
   "diffEditor.hideUnchangedRegions.enabled": true,
@@ -272,7 +249,7 @@
 
   // MISC EXTENSION SETTINGS
   "telemetry.telemetryLevel": "off",
-  "update.mode": "default",
+  "update.mode":"none",
   "oneDarkPro.bold": true,
   "oneDarkPro.vivid": false,
   "supermaven.otherWarning": false,
@@ -289,7 +266,7 @@
   "cSpell.language": "en,es-ES,la",
   "errorLens.fontWeight": "300",
   "console-ninja.featureSet": "Community",
-  "background.style": {
+  "background.editor": {
     "background-position": "100% 100%",
     "background-size": "auto",
     "opacity": 0
@@ -298,8 +275,8 @@
 
   // CUSTOM UI STYLES AND CSS IMPORTS
   "vscode_custom_css.imports": [
-    "file:///C:/Users/adrs1/OneDrive/Documents/vscode-customization/vscode-script.js",
-    "file:///C:/Users/adrs1/OneDrive/Documents/vscode-customization/custom-vscode.css"
+    "file:///C:/Users/User/AppData/Roaming/Code/User/vscode-script.js",
+    "file:///C:/Users/User/AppData/Roaming/Code/User/custom-vscode.css"
   ],
 
   // SETTINGS CYCLE PRESETS
@@ -343,6 +320,14 @@
 
   // CUSTOM UI STYLESHEET
   "custom-ui-style.stylesheet": {
+    ".monaco-workbench .activitybar": "margin-left: 8px !important;",
+    ".monaco-workbench .sidebar": "margin-left: 8px !important;",
+    ".monaco-workbench .editor-group-container": "margin: 8px !important;",
+    ".monaco-workbench .panel": "margin: 0 8px 8px 8px !important;",
+    ".monaco-workbench > .overflow-guard": "border: 4px solid #ff0000 !important; border-radius: 14px !important; padding: 4px !important;",
+    ".monaco-workbench .sidebar .composite.title": "transform: translateY(4px) !important;",
+    ".monaco-editor .line-numbers": "padding-left: 14px !important; padding-right: 8px !important;",
+
     ".editor-actions": "opacity: 0 !important; transition: opacity 0.2s ease-in-out;",
     ".editor-actions:hover": "opacity: 1 !important;",
 
@@ -431,14 +416,18 @@
     }
   },
 
-  // hide titlebar
-  // "window.customTitleBarVisibility": "never",
-  // "window.titleBarStyle": "native",
-  // "custom-ui-style.electron": {
-  //   "frame": false,
-  //   // For MacOS
-  //   "roundedCorners": true
-  // },
+  // // hide titlebar
+//   "window.customTitleBarVisibility": "never",
+//   "window.titleBarStyle": "native",
+//   "custom-ui-style.electron": {
+//     "frame": false,
+//     "transparent": true,
+//     "titleBarStyle": "hidden",
+//     "vibrancy": "ultra-dark",
+//     "opacity": 0.88,
+//     // For MacOS
+//     "roundedCorners": true
+//   },
 
   //Color customizations
   "workbench.colorCustomizations": {
@@ -790,6 +779,9 @@
       "titleBar.inactiveBackground": "#181818",
       "tab.hoverBackground": "#1f1f1f"
     },
+    "[Ayu Dark Bordered]": {
+        "input.background":"#13151ac0"
+    },
     "activityBar.border": "#00000000",
     "tab.border": "#00000000",
     "panel.border": "#00000000",
@@ -811,12 +803,26 @@
     "activityBar.activeBorder": "#00000000",
     "tab.hoverBackground": "#00000000"
   },
-  "terminal.integrated.shellIntegration.showCommandGuide": false,
-  "workbench.editor.focusRecentEditorAfterClose": false,
-  "workbench.preferredDarkColorTheme": "Mokka",
-  "workbench.layoutControl.enabled": false,
-  "window.menuBarVisibility": "compact",
-  "window.commandCenter": false,
-  "task.allowAutomaticTasks": "on",
-  "lifeline.clock.format": "h:mm A"
+    "terminal.integrated.shellIntegration.showCommandGuide": false,
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility":"toggle",
+    "task.allowAutomaticTasks": "on",
+    "lifeline.clock.format": "h:mm A",
+    "chat.commandCenter.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "frosted-glass-theme.fakeMica.enabled": true,
+    "workbench.preferredDarkColorTheme": "Vitesse Black",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.location": "hidden",
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": true,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "workbench.sideBar.location": "right",
+    "editor.unicodeHighlight.allowedCharacters": {
+      " ": true
+    }
 }
